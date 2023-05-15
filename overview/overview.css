@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+#choices {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  padding-top: 150px;
+  padding-left: 100px;
+}
+#choices li {
+  display: inline-block;
+  padding: 5px;
+}
+#choices li div {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+#choices div:hover button {
+  opacity: 1;
+}
+
+#choices button {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: black;
+  display: inline;
+  border: none;
+  position: absolute;
+  color: #fff;
+  letter-spacing: 2px;
+  left: 50px;
+  top: 45px;
+  width: 150px;
+  height: 50px;
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+#choices li img {
+  z-index: 1;
+  position: relative;
+  max-width: 250px;
+  width: 250px;
+  height: 141px;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+#choices div:hover img {
+  opacity: 0.3;
+  transform: scale(1.3);
+}
+@media screen and (max-width: 1024px){
+	.nav-links{
+		/* width: 60%; */
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 768px){
+  .nav-links{
+		width: 100%;
+	}
+  #choices {
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  #choices li img {
+    width: 200px;
+    height: 113px;
+  }
+  #choices button {
+    font-size: 16px;
+    letter-spacing: 1px;
+    left: 50px;
+    top: 31.5px;
+    width: 100px;
+    height: 50px;
+  }
+}
+/*
+.two:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (2).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.two {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.two:hover:after {
+  opacity: 0.3;
+}
+
+.three:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (3).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.three {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.three:hover:after {
+  opacity: 0.3;
+}
+
+.four:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (4).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.four {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.four:hover:after {
+  opacity: 0.3;
+}
+
+.five:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (5).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.five {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.five:hover:after {
+  opacity: 0.3;
+}
+
+.six:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (6).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.six {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.six:hover:after {
+  opacity: 0.3;
+}
+
+.seven:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (7).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.seven {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.seven:hover:after {
+  opacity: 0.3;
+}
+
+.eight:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (8).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.eight {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.eight:hover:after {
+  opacity: 0.3;
+}
+
+.nine:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (9).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.nine {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.nine:hover:after {
+  opacity: 0.3;
+}
+
+.ten:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (10).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.ten {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.ten:hover:after {
+  opacity: 0.3;
+}
+
+.eleven:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (11).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.eleven {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.eleven:hover:after {
+  opacity: 0.3;
+}
+
+.twelve:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (12).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.twelve {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.twelve:hover:after {
+  opacity: 0.3;
+}
+
+.thirteen:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (13).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.thirteen {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.thirteen:hover:after {
+  opacity: 0.3;
+}
+
+.fourteen:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (14).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.fourteen {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.fourteen:hover:after {
+  opacity: 0.3;
+}
+
+.fifteen:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (15).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.fifteen {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.fifteen:hover:after {
+  opacity: 0.3;
+}
+
+.sixteen:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (16).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.sixteen {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.sixteen:hover:after {
+  opacity: 0.3;
+}
+
+.seventeen:after {
+  content:'';
+  background-size: 250px 141px;
+  background-image: url('../../images/loc (17).jpg');
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  opacity: 1; 
+}
+.seventeen {
+  position: relative;
+  width:100%;
+  width: 250px;
+  height: 141px;
+}
+.seventeen:hover:after {
+  opacity: 0.3;
+}
+*/

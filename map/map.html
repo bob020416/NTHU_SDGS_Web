@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Geolocation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
+
+		<link rel="stylesheet" type="text/css" href="../menu/menu.css" />
+		<link rel="stylesheet" type="text/css" href="./map.css" />
+		<script src="./map.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<nav id="menu"> 
+				<div id="about">
+					<h2>一支手機體驗</h2>
+					<h1><i>永續清華</i></h1>
+					<img id="sdgs-img" src="../images/sdgs.png" alt="SDGS">
+				</div>
+				<ul class="nav-links">
+					<li>
+						<a href="../index.html">HOME</a>
+					</li>
+					<li>
+						<a href="../about/about.html">ABOUT</a>
+					</li>
+					<li>
+						<a href="../map/map.html">MAP</a>
+					</li>
+					<li>
+						<a href="../overview/overview.html">OVERVIEW</a>
+					</li>
+				</ul>
+				<div class="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+			<div id="map-wrapper">
+				<div id="map"></div>
+			</div>
+			</div>
+		</div>
+		
+
+		<!-- 
+		The `defer` attribute causes the callback to execute after the full HTML
+		document has been parsed. For non-blocking uses, avoiding race conditions,
+		and consistent behavior across browsers, consider loading using Promises
+		with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+		-->
+		<script src="../menu/menu.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+			defer
+		></script>
+	</body>
+</html>

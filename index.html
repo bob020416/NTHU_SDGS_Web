@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Geolocation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<script src="index.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
+		<link rel="stylesheet" type="text/css" href="menu/menu.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin=""/><!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		  crossorigin=""></script>
+		
+	</head>
+	<body>
+		<div class="menu">
+			<nav> 
+				<div id="about">
+					<h2>一支手機體驗</h2>
+					<h1><i>永續清華</i></h1>
+					<img id="sdgs-img" src="images/sdgs.png" alt="SDGS">
+				</div>
+				<ul class="nav-links">
+					<li>
+						<a href="index.html">HOME</a>
+					</li>
+					<li>
+						<a href="about/about.html">ABOUT</a>
+					</li>
+					<li>
+						<a href="map/map.html">MAP</a>
+					</li>
+					<li>
+						<a href="overview/overview.html">OVERVIEW</a>
+					</li>
+				</ul>
+				<div class="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</div>
+		<div id="instruction">
+			<div class="i-wrapper">
+				<p>這是關於頁面，您可以透過這些方式聯絡我們。</p>
+				<img id="abouti" src="images/About.png">
+			</div>
+			<div class="i-wrapper">
+				<p>這是地圖頁面，您可以按Pan to Current Location定位。</p>
+				<img id="mapi" src="images/Map.png">
+			</div>
+			<div class="i-wrapper">
+				<p>這是總覽頁面，您可以點選圖片以查看細節。</p>
+				<img id="overviewi" src="images/Overview.png">
+			</div>
+			<div id="choose-for-you">
+				<p>如果您還是不知道要要做甚麼的話，就隨便按個按鈕吧！</p>
+				<div id="choose-l">
+					<div id="location">
+						<div id="random-location">
+							<button class="coolbutton" onclick=getRandomLocation()>
+								<span>隨機的地點</span>
+							</button>
+						</div>
+						<div id="closest-location">
+							<button class="coolbutton" onclick=getLocation()>
+								<span>最近的地點</span>
+							</button>
+						</div>
+					</div>
+					<div class="choice-wrapper">
+						<div id="link"><a href='overview/content/one.html'>
+							<div id="choice">
+								<button>工程一館</button>
+								<img src="images/loc (1).jpg">
+							</div>
+						</a></div>
+					</div>
+				</div>
+			</div>
+			<div id="mapid"></div>
+			<script type="text/javascript">
+
+				// 建立 Leaflet 地圖
+				var map = L.map('mapid');
+			  
+				// 設定經緯度座標
+				map.setView(new L.LatLng(22.992, 120.239), 12);
+				
+				// 設定圖資來源
+				var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+				var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 16});
+				map.addLayer(osm);
+			  
+			</script>
+		</div>
+		<script src="menu/menu.js"></script>
+	</body>
+</html>
